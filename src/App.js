@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Commands from './components/Commands';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Info from './components/Info';
+import Navbar from './components/Navbar';
+import './styles/App.css';
 
 function App() {
+
+  const scrollHomeRef = useRef()
+  const scrollInfoRef = useRef()
+  const executeHomeScroll = () => window.scrollTo({ behavior: 'smooth', top: scrollHomeRef.current.offsetTop })
+  const executeFeaturesScroll = () => window.scrollTo({ behavior: 'smooth', top: scrollInfoRef.current.offsetTop })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Navbar scrollHome={executeHomeScroll} scrollInfo={executeFeaturesScroll} />
+            <Home rf={scrollHomeRef} />
+            <Info rf={scrollInfoRef} />
+            <Footer />
+          </Route>
+          <Route path='/commands'>
+            <Commands />
+            <Footer />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,13 +1,45 @@
+@font-face {
+  font-family: "ZenDots";
+  src: url(./fonts/ZenDots-Regular.ttf);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(46, 50, 54);
+  font-family: "ZenDots";
+}
+button {
+  font-family: "ZenDots";
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
 }

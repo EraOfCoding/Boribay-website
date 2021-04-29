@@ -1,0 +1,44 @@
+.commands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  align-items: flex-start;
+}
+
+.command-container {
+  display: flex;
+  width: 70vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  background-color: rgb(31, 31, 31);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 3px 7px;
+  font-weight: 300;
+  text-align: start;
+  max-height: 20px;
+}
+
+.category-container {
+  padding-bottom: 50px;
+}
+
+.category {
+  text-align: start;
+  padding: 0 0 10px 10px;
+}
